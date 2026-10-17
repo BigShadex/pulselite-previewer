@@ -1,6 +1,8 @@
 # PulseLite UI Sound Previewer
 
-A small static web page: click through a mock game menu and hear the 20 free PulseLite UI sounds, with teasers from the paid Menu Kit, Sci-Fi and Horror themes.
+A small static web page: click through a mock game menu and hear the 20 free PulseLite UI sounds, or pick a paid style (Menu Kit, Sci-Fi, Horror) to hear a 3-sound preview of that pack only.
+
+Link straight to a style with `?theme=free|menu|scifi|horror` (e.g. `?theme=horror`). Prices and the sale end date live in the `CONFIG` object at the top of the script in `index.html`. No analytics or tracking.
 
 Live: https://bigshadex.github.io/pulselite-previewer/
 
