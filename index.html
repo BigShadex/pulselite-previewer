@@ -129,8 +129,11 @@ function play(ev){
 const $=s=>document.querySelector(s),now=$("#now");
 function say(t){now.textContent="♪ "+t}
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("show"),1600)}
-document.addEventListener("pointerenter",e=>{if(e.target.tagName==="BUTTON"||e.target.tagName==="INPUT")play("button_hover")},true);
-document.addEventListener("focusin",e=>{if(e.target.matches("button:focus-visible"))play("button_hover")});
+const fineHover=matchMedia("(hover: hover) and (pointer: fine)");let lastPtr=0;
+document.addEventListener("pointerdown",()=>{lastPtr=performance.now()},true);
+document.addEventListener("pointerenter",e=>{if(e.pointerType!=="mouse"||!fineHover.matches)return;if(e.target.tagName==="BUTTON"||e.target.tagName==="INPUT")play("button_hover")},true);
+document.addEventListener("keydown",e=>{if(e.key==="Tab")lastPtr=0},true);
+document.addEventListener("focusin",e=>{if(performance.now()-lastPtr<1000)return;if(e.target.matches("button:focus-visible"))play("button_hover")});
 document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
  if(b.dataset.theme)return setTheme(b.dataset.theme);
  if(b.hasAttribute("data-toggle")){const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);return play(on?"toggle_on":"toggle_off")}
