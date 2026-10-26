@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PulseLite UI Sound Previewer: hear game UI sounds in your browser</title>
-<meta name="description" content="Try 20 free CC BY 4.0 game UI sounds in a mock menu, or hear three samples each from the PulseLite Menu Kit, Sci-Fi and Horror packs.">
+<title>PulseLite UI Sound Previewer — free and themed game UI sounds</title>
+<meta name="description" content="Try 20 free game UI sounds or hear three listening samples each from the PulseLite Menu Kit, Sci-Fi, and Horror packs.">
 <style>
 :root{--bg:#0e1220;--panel:#171d33;--line:#2a3358;--txt:#e7ebff;--mut:#9ba6d0;--acc:#5fd0ff;--acc2:#a77bff;--bad:#ff8090;--focus:#ffd35c}
 body.scifi{--bg:#05141a;--panel:#0a2229;--line:#14505c;--acc:#33fff0;--acc2:#2f8cff}
@@ -58,9 +58,9 @@ footer{color:var(--mut);font-size:.85rem}
 .offer h2{margin:0;font-size:1.25rem}
 .offer .scope{display:inline-block;margin:4px 0 2px;padding:2px 10px;border-radius:20px;background:var(--acc);color:#081018;font-weight:700;font-size:.8rem}
 .offer p{margin:.35em 0}
-.price{font-size:1.15rem;font-weight:800}
-.price s{color:var(--mut);font-weight:400;font-size:.95rem}
-.salenote{color:#ffd35c;font-size:.9rem}
+
+
+
 .offer .small{font-size:.88rem;color:var(--mut)}
 /* paid samples */
 .samples{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -73,14 +73,59 @@ footer{color:var(--mut);font-size:.85rem}
 #err button{padding:6px 12px;border-color:var(--bad)}
 [hidden]{display:none!important}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Buyer landing layout */
+header,main,footer{max-width:1160px}
+header{padding-top:42px}
+body{background:radial-gradient(circle at 18% 0,#25315a,var(--bg) 54%);transition:background .25s}
+body.scifi{background:radial-gradient(circle at 18% 0,#0d4651,var(--bg) 55%)}
+body.horror{background:radial-gradient(circle at 18% 0,#511d32,var(--bg) 55%)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:20px 0 0}
+.hero-actions .primary{padding:12px 17px}
+.cta{display:inline-block;margin:0;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--acc2),var(--acc));color:#081018;font-weight:800;text-decoration:none}
+.cta.ghost{background:none;border:1px solid var(--acc);color:var(--acc)}
+.hero-note{max-width:60ch;margin:13px 0;color:var(--mut);font-size:.88rem}
+.hero-stat{display:flex;flex-direction:column;justify-content:center;gap:3px;min-height:170px;padding:20px;border:1px solid #5fd0ff66;border-radius:18px;background:linear-gradient(145deg,#1d2b4d,#11192a);box-shadow:0 16px 42px #0005}
+.hero-stat strong{color:var(--acc);font-size:4rem;line-height:1;letter-spacing:-.07em}
+.hero-stat span{font-weight:800;font-size:1.05rem}
+.hero-stat small{max-width:28ch;margin-top:5px;color:var(--mut);font-size:.82rem}
+.themes{gap:10px;margin:20px 0 12px}
+.themes button{min-height:67px;border-radius:12px;background:linear-gradient(145deg,#ffffff12,#ffffff05)}
+.offer{border-color:var(--acc);border-radius:15px;background:linear-gradient(120deg,#172541,#12182a);padding:17px 19px}
+.offer h2{font-size:1.2rem;color:var(--txt);letter-spacing:0}
+.offer .scope{margin:5px 0 7px}
+.offer .small{color:var(--mut)}
+.grid{gap:16px}
+.panel{border-color:#ffffff15;box-shadow:0 12px 32px #0004}
+.pack-section{margin-top:18px}
+.pack-heading{max-width:70ch;margin-bottom:16px}
+.pack-heading .eyebrow{margin-bottom:6px}
+.pack-heading p:last-child{color:var(--mut)}
+.pack-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.pack-card{display:flex;flex-direction:column;min-height:205px;padding:18px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#19233c,#131a2b)}
+.pack-card.free{border-color:#5fd0ff77;background:linear-gradient(145deg,#16334a,#131a2b)}
+.pack-card.complete{border-color:#a77bff88;background:linear-gradient(145deg,#292247,#171a2c)}
+.pack-kicker{margin:0 0 6px;color:var(--mut);font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.pack-card h3{margin:0;color:var(--txt);font-size:1.16rem}
+.pack-count{margin:6px 0 2px;color:var(--acc);font-size:1.35rem;font-weight:850}
+.pack-card.complete .pack-count{color:#c2a4ff}
+.pack-card p:not(.pack-kicker):not(.pack-count){margin:7px 0 10px;color:var(--mut);font-size:.92rem}
+.pack-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:10px}
+.pack-links a{font-weight:750}
+.pack-links button{padding:0;border:0;background:none;color:var(--acc);text-decoration:underline;font-size:.94rem}
+.pack-links button:hover{box-shadow:none;color:#b9ecff}
+.pack-note{margin:13px 0 0;color:var(--mut);font-size:.87rem}
+.legal{margin-top:16px;padding:15px 17px;border:1px solid #ffffff14;border-radius:12px;background:#ffffff06;color:var(--mut);font-size:.87rem}
+.legal p{margin:5px 0}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero-stat{min-height:0}.themes{grid-template-columns:1fr 1fr}.pack-grid{grid-template-columns:1fr}}
+@media(max-width:420px){header,main,footer{padding:14px}.hero-stat{padding:16px}.panel{padding:14px}.pack-card{min-height:0}}
 </style>
 </head>
 <body>
 <header>
-<p class="eyebrow">PulseLite UI Sound Previewer</p>
-<h1>Hear the sound of your next game menu.</h1>
-<p class="sub">Try 20 free UI sounds, or switch styles to hear three samples from each paid pack. Click a sample, compare the feel, and choose the pack that suits your game.</p>
-<div class="themes" role="group" aria-label="Choose a sound style">
+<p class="eyebrow">PulseLite UI sound previewer</p>
+<h1>Find the sound behind every click.</h1>
+<p class="sub">Try 20 free game UI sounds, or hear three listening samples each from the paid Menu Kit, Sci-Fi, and Horror packs.</p><div class="hero-actions"><a class="cta" id="heroTry" href="#preview">▶ Try the free sample</a><a class="cta ghost" href="#packs">Compare the packs</a></div><p class="hero-note">The page uses an illustrative game-menu interface. Each paid style has three labelled teasers; the demo does not audition every recording in a paid pack.</p><aside class="hero-stat" aria-label="20 distinct free recordings"><strong>20</strong><span>free recordings</span><small>MP3 and OGG browser files are alternate formats, not extra sounds.</small></aside>
+<div class="themes" id="preview" role="group" aria-label="Choose a sound style">
  <button type="button" data-theme="free" aria-pressed="true"><strong>Free sample</strong><small>20 sounds, full mock menu</small></button>
  <button type="button" data-theme="menu" aria-pressed="false"><strong>Menu Kit</strong><small>3-sound preview · 200 in pack</small></button>
  <button type="button" data-theme="scifi" aria-pressed="false"><strong>Sci-Fi UI</strong><small>3-sound preview · 104 in pack</small></button>
@@ -136,31 +181,56 @@ footer{color:var(--mut);font-size:.85rem}
   <p class="now" id="now" role="status" aria-live="polite">Nothing plays until you click or tap a button.</p>
   <div id="err" role="alert"><span id="errMsg"></span><button type="button" id="retry">Retry</button></div>
  </section>
- <section class="panel full" aria-labelledby="getTitle">
-  <h2 id="getTitle">Get the sounds</h2>
-  <p><a class="cta" href="https://bigshadex.itch.io/pulselite-ui-sfx-free">Free sample (20 sounds)</a>
-  <a class="cta" href="https://bigshadex.itch.io/pulselite-ui-sfx">Menu Kit: 200 sounds</a>
-  <a class="cta" href="https://bigshadex.itch.io/pulselite-complete">Complete: 408 sounds, 3 styles</a></p>
-  <p>Install resources: <a href="https://github.com/BigShadex/pulselite-ui-godot">Godot 4 addon on GitHub</a> (free, plays the free sounds out of the box).</p>
-  <p>Credit line for your game: <code style="word-break:break-word">Sounds: PulseLite UI SFX by Bigshadex (CC BY 4.0) https://bigshadex.itch.io/pulselite-ui-sfx-free</code></p>
- </section>
+ <section class="panel full pack-section" id="packs" aria-labelledby="packsTitle">
+ <div class="pack-heading">
+  <p class="eyebrow">Choose your pack</p>
+  <h2 id="packsTitle">Choose from five sound sets</h2>
+  <p>Each itch.io page has current prices and full licence terms. Counts refer to distinct recordings; WAV and OGG are alternate formats, not extra sounds.</p>
+ </div>
+ <div class="pack-grid">
+  <article class="pack-card free">
+   <p class="pack-kicker">Free sample</p><h3>PulseLite Free</h3><p class="pack-count">20 recordings</p>
+   <p>CC BY 4.0 sounds with the free Godot 4 autoload. All 20 play in the free preview mode.</p>
+   <div class="pack-links"><a href="https://bigshadex.itch.io/pulselite-ui-sfx-free" target="_blank" rel="noopener">Get the free sample on itch.io ↗</a><button type="button" data-theme="free">Try the free sample</button></div>
+  </article>
+  <article class="pack-card">
+   <p class="pack-kicker">General purpose</p><h3>Menu Kit</h3><p class="pack-count">200 recordings</p>
+   <p>200 recordings across 13 sound categories mapped to 14 named UI events (toggle: 8 on and 7 off), WAV and OGG, with Godot 4 and Unity helper scripts.</p>
+   <div class="pack-links"><a href="https://bigshadex.itch.io/pulselite-ui-sfx" target="_blank" rel="noopener">See Menu Kit on itch.io ↗</a><button type="button" class="pack-theme" data-theme="menu">Hear 3 teaser samples</button></div>
+  </article>
+  <article class="pack-card">
+   <p class="pack-kicker">Digital · holographic</p><h3>Sci-Fi UI</h3><p class="pack-count">104 recordings</p>
+   <p>The same 14 named UI events in a sci-fi style, WAV and OGG, with Godot 4 and Unity helper scripts.</p>
+   <div class="pack-links"><a href="https://bigshadex.itch.io/pulselite-scifi-ui" target="_blank" rel="noopener">See Sci-Fi UI on itch.io ↗</a><button type="button" class="pack-theme" data-theme="scifi">Hear 3 teaser samples</button></div>
+  </article>
+  <article class="pack-card">
+   <p class="pack-kicker">Dark · eerie</p><h3>Horror UI</h3><p class="pack-count">104 recordings</p>
+   <p>The same 14 named UI events in a horror style, WAV and OGG, with Godot 4 and Unity helper scripts.</p>
+   <div class="pack-links"><a href="https://bigshadex.itch.io/pulselite-horror-ui" target="_blank" rel="noopener">See Horror UI on itch.io ↗</a><button type="button" class="pack-theme" data-theme="horror">Hear 3 teaser samples</button></div>
+  </article>
+  <article class="pack-card complete">
+   <p class="pack-kicker">All three paid packs</p><h3>PulseLite Complete</h3><p class="pack-count">408 recordings</p>
+   <p>Menu Kit 200 + Sci-Fi 104 + Horror 104, counted as distinct recordings. WAV and OGG are alternate formats.</p>
+   <div class="pack-links"><a href="https://bigshadex.itch.io/pulselite-complete" target="_blank" rel="noopener">See Complete on itch.io ↗</a></div>
+  </article>
+ </div>
+ <p class="pack-note">Paid downloads include Unity helper scripts that are compile-checked but have not been tested inside the Unity editor; they are not included in the free Godot repository. Paid teasers here are for listening only and are not licensed for reuse.</p>
+</section>
 </main>
 <div id="toast" aria-hidden="true"></div>
 <footer>
- <p>The 20 free sounds are licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: free for commercial use with credit to "PulseLite UI SFX by Bigshadex". The samples in the Menu Kit, Sci-Fi and Horror previews are from the paid packs and are for listening here only; the purchased pack includes the commercial-use licence.</p>
+ <p>The 20 free sounds are licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: free for commercial use with credit to “PulseLite UI SFX by Bigshadex”.</p><p>Credit line: <code style="word-break:break-word">Sounds: PulseLite UI SFX by Bigshadex (CC BY 4.0) https://bigshadex.itch.io/pulselite-ui-sfx-free</code></p><p>Paid teaser samples are from the paid packs and are for listening here only. See itch.io for the current full-pack terms.</p>
  <p>All audio is procedural DSP synthesis (generated in code), not AI-generated audio. This page's code was written with AI assistance.</p>
 </footer>
 <script>
-/* ---- Single price/product config. Edit here only. ---- */
+/* Product names and canonical links only; current prices and terms are on itch.io. */
 const CONFIG={
- currency:"US$",
- complete:{name:"PulseLite Complete",url:"https://bigshadex.itch.io/pulselite-complete",n:408,price:13.99},
+ complete:{name:"PulseLite Complete",url:"https://bigshadex.itch.io/pulselite-complete",n:408},
  packs:{
   free:{name:"Free sample",url:"https://bigshadex.itch.io/pulselite-ui-sfx-free",n:20},
-  menu:{name:"Menu Kit",url:"https://bigshadex.itch.io/pulselite-ui-sfx",n:200,price:9.99,
-        sale:{price:5.99,pct:40,ends:"2026-10-30T13:29:00Z",label:"30 Oct"}}, /* 30 Oct 23:59 Adelaide time, matches itch sale */
-  scifi:{name:"Sci-Fi UI",url:"https://bigshadex.itch.io/pulselite-scifi-ui",n:104,price:4.99},
-  horror:{name:"Horror UI",url:"https://bigshadex.itch.io/pulselite-horror-ui",n:104,price:4.99}
+  menu:{name:"Menu Kit",url:"https://bigshadex.itch.io/pulselite-ui-sfx",n:200},
+  scifi:{name:"Sci-Fi UI",url:"https://bigshadex.itch.io/pulselite-scifi-ui",n:104},
+  horror:{name:"Horror UI",url:"https://bigshadex.itch.io/pulselite-horror-ui",n:104}
  }
 };
 const FREE={button_click:["click_03","click_09"],button_hover:["hover_01","hover_05"],toggle_on:["toggle_01"],toggle_off:["toggle_02"],menu_confirm:["confirm_05","confirm_06"],menu_back:["back_cancel_01"],error:["error_01","error_03"],notification:["notify_02","notify_05"],panel_open:["panel_open_04"],panel_close:["panel_close_05"],transition:["whoosh_06"],coin_pickup:["coin_01","coin_07"],reward:["reward_05"],level_up:["level_up_01"]};
@@ -209,6 +279,18 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b||
  if(theme!=="free")return;
  if(b.hasAttribute("data-toggle")){const on=b.getAttribute("aria-checked")!=="true";b.setAttribute("aria-checked",on);return play(on?"toggle_on":"toggle_off")}
  play(b.dataset.ev||"button_click")});
+$("#heroTry").addEventListener("click",event=>{
+ event.preventDefault();
+ setTheme("free",true);
+ $("#preview").scrollIntoView({behavior:"smooth",block:"start"});
+});
+document.querySelectorAll(".pack-theme").forEach(button=>{
+ button.addEventListener("click",event=>{
+  event.stopPropagation();
+  setTheme(button.dataset.theme,true);
+  $("#preview").scrollIntoView({behavior:"smooth",block:"start"});
+ });
+});
 let coins=0,lvl=1,opener=null;
 $("#coinBtn").addEventListener("click",()=>{coins+=1;$("#coins").textContent=coins});
 $("#chestBtn").addEventListener("click",()=>{coins+=25;$("#coins").textContent=coins;toast("🎁 +25 coins!")});
@@ -226,22 +308,20 @@ $("#vol").oninput=e=>{vol=e.target.value/100;if(gain)gain.gain.value=vol};
 $("#vol").onchange=()=>play("button_click");
 for(const ev in FREE){const b=document.createElement("button");b.type="button";b.textContent=ev;b.dataset.ev=ev;b.setAttribute("aria-label","Play free "+ev.replace(/_/g," ")+" sound");$("#chips").appendChild(b)}
 
-const money=v=>CONFIG.currency+v.toFixed(2);
-function priceOf(P){if(P.sale&&Date.now()<Date.parse(P.sale.ends))return{now:P.sale.price,was:P.price,sale:P.sale};return{now:P.price}}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function renderOffer(t){const O=$("#offer"),P=CONFIG.packs[t],C=CONFIG.complete,cp=money(C.price);
- if(t==="free"){const m=priceOf(CONFIG.packs.menu);
-  O.innerHTML=`<h2 id="offerName">Free sample</h2><span class="scope">20 free sounds</span>
-  <p>All 20 sounds, CC BY 4.0, free for commercial use with credit. Click around the mock menu below.</p>
-  <p><a class="cta" href="${P.url}">Get the 20 free sounds</a>
-  <a class="cta ghost" href="${CONFIG.packs.menu.url}">Menu Kit: 200 sounds, ${money(m.now)}${m.sale?` (${m.sale.pct}% off)`:""}</a></p>
-  <p class="small">Or get every style in <a href="${C.url}">${C.name}</a>: ${C.n} sounds, ${cp}.</p>`;return}
- const p=priceOf(P);
- O.innerHTML=`<h2 id="offerName">${esc(P.name)}</h2><span class="scope">3-sound preview</span>
-  <p>Full pack: <strong>${P.n} sounds</strong>, WAV + OGG. <span class="price">${money(p.now)}</span>${p.was?` <s>${money(p.was)}</s> <span class="salenote">${p.sale.pct}% off until ${p.sale.label}</span>`:""}</p>
-  <p><a class="cta" href="${P.url}">Get ${esc(P.name)} - ${money(p.now)}</a>
-  <a class="cta ghost" href="${CONFIG.packs.free.url}">Try the 20 free sounds</a></p>
-  <p class="small">Want all three styles? <a href="${C.url}">${C.name}</a>: ${C.n} sounds, ${cp}.</p>`}
+function renderOffer(t){
+ const O=$("#offer"),P=CONFIG.packs[t],C=CONFIG.complete;
+ if(t==="free"){
+  O.innerHTML='<h2 id="offerName">Free sample</h2><span class="scope">20 distinct sounds</span>'+
+   '<p>All 20 free sounds, with the Godot 4 helper. Click around the complete mock menu below.</p>'+
+   '<p><a class="cta" href="'+P.url+'" target="_blank" rel="noopener">Get the free sample on itch.io</a></p>';
+  return;
+ }
+ O.innerHTML='<h2 id="offerName">'+esc(P.name)+'</h2><span class="scope">3-sound teaser · '+P.n+' recordings in the pack</span>'+
+  '<p>Hear three samples from this paid style below. The full pack contains more recordings; this page does not audition them all.</p>'+
+  '<p><a class="cta" href="'+P.url+'" target="_blank" rel="noopener">See current price and full terms on itch.io</a>'+
+  ' <a class="cta ghost" href="'+C.url+'" target="_blank" rel="noopener">PulseLite Complete</a></p>';
+}
 function renderSamples(t){const P=CONFIG.packs[t],S=$("#samples");S.innerHTML="";
  $("#paidTitle").textContent=P.name+" samples";
  $("#paidNotice").textContent=`You're hearing 3 samples from ${P.name}. The full pack includes ${P.n} sounds. Preview samples are for listening here; the purchased pack includes the commercial-use licence.`;
