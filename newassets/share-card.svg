@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PulseLite UI Sound Previewer</title>
+  <desc id="desc">Illustrative PulseLite preview card showing 20 free CC BY 4.0 sounds, three listening-only teasers per paid style, and no included game UI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a30"/><stop offset="1" stop-color="#0a0e18"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#a77bff"/><stop offset="1" stop-color="#5fd0ff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#4c629d" stop-opacity=".55"/><stop offset="1" stop-color="#182342" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="300" cy="50" rx="600" ry="420" fill="url(#glow)"/>
+  <circle cx="1100" cy="590" r="280" fill="#2a1846" opacity=".32"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(72 68)" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linecap="round">
+      <path d="M0 17V39 M15 6V50 M30 13V43 M45 0V56 M60 16V40"/>
+    </g>
+    <text x="150" y="107" fill="#bfc9ec" font-size="24" font-weight="700" letter-spacing="3">PULSELITE UI SOUND PREVIEWER</text>
+    <text x="72" y="215" fill="#f3f5ff" font-size="68" font-weight="700" letter-spacing="-2">Find the sound</text>
+    <text x="72" y="292" fill="#f3f5ff" font-size="68" font-weight="700" letter-spacing="-2">behind every click.</text>
+    <text x="76" y="346" fill="#aeb9dc" font-size="27">Listen, compare, choose your style.</text>
+    <rect x="72" y="390" width="250" height="126" rx="18" fill="#17223b" stroke="#5fd0ff" stroke-opacity=".55" stroke-width="2"/>
+    <text x="96" y="472" fill="#5fd0ff" font-size="74" font-weight="700">20</text>
+    <text x="195" y="451" fill="#f3f5ff" font-size="24" font-weight="700">FREE</text>
+    <text x="195" y="481" fill="#b5c0df" font-size="18">CC BY 4.0</text>
+    <rect x="340" y="390" width="280" height="126" rx="18" fill="#17223b" stroke="#a77bff" stroke-opacity=".65" stroke-width="2"/>
+    <text x="365" y="463" fill="#c5a9ff" font-size="52" font-weight="700">3 each</text>
+    <text x="367" y="493" fill="#d8def3" font-size="16">listening-only teasers / paid style</text>
+    <text x="76" y="558" fill="#8794b9" font-size="21">Menu Kit  ·  Sci-Fi  ·  Horror</text>
+    <rect x="690" y="78" width="438" height="455" rx="26" fill="#151d32" stroke="#3a466b" stroke-width="2"/>
+    <text x="726" y="123" fill="#8f9ec6" font-size="18" font-weight="700" letter-spacing="2">ILLUSTRATIVE PREVIEW</text>
+    <text x="726" y="170" fill="#eef2ff" font-size="30" font-weight="700">Choose a sound set</text>
+    <g font-size="16" font-weight="700" text-anchor="middle">
+      <rect x="724" y="196" width="91" height="42" rx="11" fill="#5fd0ff"/><text x="770" y="223" fill="#09121d">FREE</text>
+      <rect x="824" y="196" width="96" height="42" rx="11" fill="#222d48" stroke="#435174"/><text x="872" y="223" fill="#d8def3">MENU</text>
+      <rect x="929" y="196" width="86" height="42" rx="11" fill="#222d48" stroke="#435174"/><text x="972" y="223" fill="#d8def3">SCI-FI</text>
+      <rect x="1023" y="196" width="72" height="42" rx="11" fill="#222d48" stroke="#435174"/><text x="1059" y="223" fill="#d8def3">HORROR</text>
+    </g>
+    <rect x="724" y="260" width="371" height="112" rx="15" fill="#101729" stroke="#34415f"/>
+    <text x="748" y="295" fill="#91a0c8" font-size="16" font-weight="700" letter-spacing="1">MENU CONFIRM</text>
+    <g fill="url(#accent)">
+      <rect x="748" y="323" width="8" height="24" rx="4"/><rect x="765" y="314" width="8" height="42" rx="4"/><rect x="782" y="329" width="8" height="19" rx="4"/><rect x="799" y="305" width="8" height="56" rx="4"/><rect x="816" y="318" width="8" height="34" rx="4"/><rect x="833" y="327" width="8" height="20" rx="4"/><rect x="850" y="311" width="8" height="48" rx="4"/><rect x="867" y="321" width="8" height="30" rx="4"/><rect x="884" y="307" width="8" height="53" rx="4"/><rect x="901" y="325" width="8" height="23" rx="4"/><rect x="918" y="314" width="8" height="42" rx="4"/><rect x="935" y="329" width="8" height="19" rx="4"/><rect x="952" y="305" width="8" height="56" rx="4"/><rect x="969" y="318" width="8" height="34" rx="4"/><rect x="986" y="327" width="8" height="20" rx="4"/><rect x="1003" y="311" width="8" height="48" rx="4"/><rect x="1020" y="321" width="8" height="30" rx="4"/><rect x="1037" y="307" width="8" height="53" rx="4"/>
+    </g>
+    <rect x="724" y="390" width="371" height="65" rx="14" fill="#202b47"/>
+    <circle cx="760" cy="422" r="17" fill="url(#accent)"/>
+    <path d="M755 413 L769 422 L755 431 Z" fill="#09121d"/>
+    <text x="790" y="429" fill="#edf1ff" font-size="20">Tap a control to audition</text>
+    <text x="726" y="488" fill="#aab5d4" font-size="17">No game UI is included.</text>
+  </g>
+</svg>

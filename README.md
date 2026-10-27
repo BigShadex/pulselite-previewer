@@ -20,3 +20,7 @@ The audio is procedural DSP synthesis, not AI-generated audio. Scripts and page 
 
 Live page: https://bigshadex.github.io/pulselite-previewer/
 Godot 4 add-on: https://github.com/BigShadex/pulselite-ui-godot
+
+## Share card
+
+`newassets/share-card.svg` is the editable source for `newassets/share-card.png`. The PNG was rendered from the SVG with the installed Microsoft Edge headless renderer at a 1200 × 630 viewport and verified as 1200 × 630; the artwork contains no audio or external images.
